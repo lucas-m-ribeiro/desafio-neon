@@ -11,7 +11,4 @@ gem 'appium_doc_lint', '~> 0.0.11'
 gem 'appium_console', '~> 3.0'
 gem 'rspec'
 gem 'pry'
-
-
-
-# gem "rails"
+gem 'eventmachine', '~> 1.2', '>= 1.2.7'
