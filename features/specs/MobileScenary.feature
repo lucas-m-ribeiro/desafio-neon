@@ -1,10 +1,9 @@
 Feature: Mobile scenary
 
+@exec
 Scenario: Register new customer
     Given the user access the customer registration application
     When the user click on register new customer
-    And put the name
-    And put the telephone number
     Then the register must be saved
 
 
@@ -14,7 +13,7 @@ Scenario: Update register customer
     And update your telephone number
     Then the update must be saved
 
-
+@exec
 Scenario: Delete register customer
     Given the user access the customer registration application
     When the user click your register

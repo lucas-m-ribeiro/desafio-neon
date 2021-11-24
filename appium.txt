@@ -1,0 +1,5 @@
+[caps]
+platformName = 'Android'
+deviceName = 'Android Emulator'
+app = 'C:\Users\Lucas Ribeiro\Desktop\desafio-neon\app\cadastro_clientes_teste.apk'
+

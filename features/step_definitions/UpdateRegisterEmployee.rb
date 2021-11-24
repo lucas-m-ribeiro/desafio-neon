@@ -1,11 +1,11 @@
-require 'appium_lib'
-require 'cucumber'
-require 'rspec'
-require 'httparty'
+# require 'appium_lib'
+# require 'cucumber'
+# require 'rspec'
+# require 'httparty'
 
 
-class UpdateRegisterEmployee
+# class UpdateRegisterEmployee
     
 
 
-end
+# end

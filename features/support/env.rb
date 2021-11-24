@@ -1,18 +1,11 @@
-require 'rubygems'
 require 'appium_lib'
+require 'rubygems'
+require 'appium_console'
 
-desired_caps = {
-    caps: {
-        "platformName": "Android",
-        "appium:deviceName": "Android Emulator",
-        "appium:app": "C:\\Users\\Lucas Ribeiro\\Desktop\\desafio-neon\\app\\cadastro_clientes_teste.apk"
-    }
-}
-
-@driver = Appium::Driver.new(desired_caps)
-@driver.start.driver
-
-
+caps = Appium.load_appium_txt file:
+File.expand_path('./../../../appium.txt', __FILE__), verbose: true
+Appium::Driver.new(caps, true)
+Appium.promote_appium_methods Object
 # server_url = "http://127.0.0.1:4723/wd/hub"
 
 
