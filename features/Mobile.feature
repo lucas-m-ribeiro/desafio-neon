@@ -17,7 +17,7 @@ Scenario: Update register customer
 
 @mobile
 Scenario: Delete register customer
-    # Given the user access the customer registration application
+    # Given the user access the customer registration application -- step comentado por ja ser executado no step anterior
     When the user click your register
     And click on delete button
     Then the register must be deleted

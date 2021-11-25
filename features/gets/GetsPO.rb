@@ -18,10 +18,10 @@ class GetsPO
     end
 
     def valida_registro_deletado
-        find_element(id: contato_deletado).displayed?
+        find_element(id: @contato_deletado).displayed?
     end
 
     def valida_cadastro_realizado
-        find_element(id: cadastro_realizado).displayed?
+        find_element(id: @cadastro_realizado).displayed?
     end
 end

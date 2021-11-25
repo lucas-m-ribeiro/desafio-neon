@@ -10,19 +10,22 @@ class ActsCrud
     include HTTParty
     base_uri 'http://dummy.restapiexample.com/api/v1'
 
-    $body = {
+
+    def create 
+      
+      body = {
         :name => "Barry Allen",
         :salary => '123',
         :age => '23'
-    }.to_json
-  
-  $headers = {
-    'Accept' => 'application/vnd.tasksmanager.v2',
-    'Content-Type' => 'application/json'
-  }
+      }.to_json
 
-    def create 
+      headers = {
+        'Accept' => 'application/vnd.tasksmanager.v2',
+        'Content-Type' => 'application/json'
+      }
+
       self.class.post('/create', body: $body, headers: $headers) 
+    
     end
 
     def read (id)
