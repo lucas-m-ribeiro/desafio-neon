@@ -5,14 +5,10 @@ require "rspec"
 require_relative "../acts/ActsPO"
 require_relative "../gets/GetsPO"
 
-    @act = ActsPO.new
-    @get = GetsPO.new
-
-    # Given('the user access the customer registration application') do
-    #     @get.acesso_app;
-    # end
 
     When('the user click your register') do
+        @act = ActsPO.new
+        @get = GetsPO.new
         @act.seleciona_contato
     end
 

@@ -4,14 +4,11 @@ require 'httparty'
 require_relative "../acts/ActsCrud"
 
 
-Given('the address api') do 
-    @update_usuario = ActsCrud.new
-end
-
 When('the user send request with id for update') do
+    @update_usuario = ActsCrud.new
     $response = @update_usuario.create
-    puts $response.body
     @id = JSON.parse($response.body)['id']
+    puts $response.body
 end
 
 Then ('the register must be updated') do
