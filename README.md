@@ -12,8 +12,18 @@ O projeto consiste na criação de cenários de testes em Gherkin de um aplicati
     Cucumber
     Httparty
     Rspec
+    
 
-A figura 1 apresenta a estrutura do projeto final, sendo que em cada diretório possuem nas seguintes finalidades: 
+ <p align="center">
+  <img width="300px" height="500px" src="https://github.com/LukasRibeiro/desafio-neon/blob/desafio/imagens/estrutura%20projeto.PNG">
+</p>
+
+    
+<p align="center">Figura 1: Estrutura final do projeto<p align="center">
+    
+    
+
+A figura 1 apresenta a estrutura do projeto final, sendo que em cada diretório possuem as seguintes finalidades: 
 
 - **app**: Contém o arquivo **.apk** do aplicativo utilizado para automação, e criação dos cenários de testes.
 
