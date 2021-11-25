@@ -1,21 +1,17 @@
-# require 'appium_console'
-# require 'appium_lib'
-# require 'cucumber'
-# require 'rspec'
-# require 'httparty'
+require 'cucumber'
+require 'rspec'
+require 'httparty'
+require_relative "../acts/ActsCrud"
 
 
-# class CreateNewEmplyee
+Given('the address of api') do 
+    @usuario = ActsCrud.new
+end
 
-#     given('')
-#     end
+When('the user send request with your information') do
+    @usuario.create
+end
 
-#     When('')
-#     end
-
-#     then('')
-#     end
-
-
-    
-# end
+Then ('the user must be registered') do
+    expect(@usuario.create.code).to eq (200)
+end

@@ -5,24 +5,22 @@ require "rspec"
 require_relative "../acts/ActsPO"
 require_relative "../gets/GetsPO"
 
-class DeleteRegisterCustomer
-
     @act = ActsPO.new
     @get = GetsPO.new
 
-    given('the user access the customer registration application') do
-        @get.acesso_app;
+    # Given('the user access the customer registration application') do
+    #     @get.acesso_app;
+    # end
+
+    When('the user click your register') do
+        @act.seleciona_contato
     end
 
-    when('the user click your register') do
-        @act.seleciona_contato;
+    When('click on delete button') do
+        @act.deleta_cliente
     end
 
-    and('click on delete register button') do
-        @act.deleta_cliente;
+    Then('the register must be deleted') do
+        response = @get.valida_registro_deletado
+        expect(response).to eq (false)
     end
-
-    then('the register must be deleted') do
-        @get.valida_registro_deletado;
-    end
-end

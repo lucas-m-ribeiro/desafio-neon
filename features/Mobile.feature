@@ -1,6 +1,8 @@
-Feature: Mobile scenary
+Feature: Mobile
 
-@exec
+#cenarios referente ao app
+
+@mobile
 Scenario: Register new customer
     Given the user access the customer registration application
     When the user click on register new customer
@@ -13,13 +15,12 @@ Scenario: Update register customer
     And update your telephone number
     Then the update must be saved
 
-@exec
+@mobile
 Scenario: Delete register customer
-    Given the user access the customer registration application
+    # Given the user access the customer registration application
     When the user click your register
-    And click on delete register button
+    And click on delete button
     Then the register must be deleted
-
 
 Scenario: About app
     Given the user access the customer registration application

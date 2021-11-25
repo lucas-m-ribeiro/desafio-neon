@@ -1,6 +1,5 @@
 require 'appium_console'
 require 'appium_lib'
-require 'appium_console'
 require 'httparty'
 require 'rspec'
 
@@ -20,29 +19,27 @@ class ActsPO
         @imagem_lista = 'br.com.dudstecnologia.cadastrodeclientes:id/imagemLista',
         @botao_excluir = 'br.com.dudstecnologia.cadastrodeclientes:id/btnExcluir',
         @confirma_excluir = 'android:id/button1'
-    end 
+    end
 
 
     def cadastra_novo_cliente 
         find_element(id: @botao_opcoes).click
+        find_element(id:@cadastrar_novo).click
         find_element(id: @nome).send_key 'Lucas'
         find_element(id: @telefone1).send_key '1239529884'
         find_element(id: @salvar).click
     end
 
-
     def confirma_cadastro
         find_element(id: @perfeito).click
     end
-
 
     def seleciona_contato
         find_element(id: @imagem_lista).click
     end
 
-
     def deleta_cliente
         find_element(id: @botao_excluir).click
+        find_element(id: @confirma_excluir).click
     end
-
 end

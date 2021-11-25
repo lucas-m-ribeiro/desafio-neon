@@ -5,20 +5,18 @@ require "rspec"
 require_relative "../acts/ActsPO"
 require_relative "../gets/GetsPO"
 
-class RegisterNewCustomer
 
+    Given('the user access the customer registration application') do
         @act = ActsPO.new
         @get = GetsPO.new
-
-    given('the user access the customer registration application') do
-        @get.acesso_app;
+        @get.acesso_app
     end
 
-    when('the user click on register new customer') do
-        @act.cadastra_novo_cliente;
+    When('the user click on register new customer') do
+        @act.cadastra_novo_cliente
     end
 
-    then('the register must be saved') do
-        @act.confirma_cadastro;
+    Then('the register must be saved') do
+        valida_cadastro = get.valida_cadastro_realizado
+        expect(valida_cadastro).to eq (true)
     end
-end
