@@ -1,0 +1,40 @@
+name: Demo
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run deploy in dev
+        run: echo realizando build
+  
+  deploy_dev:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+      url: google.com
+    needs: build
+    steps:
+      - name: Run deploy in hml
+        run: echo realizando deploy em dev
+  
+  deploy_hml:
+    runs-on: ubuntu-latest
+    environment:
+      name: hml
+      url: google.com
+    needs: deploy_dev
+    steps:
+      - name: Run deploy in hml
+        run: echo realizando deploy em hml
+        
+  deploy_prd:
+    runs-on: ubuntu-latest
+    environment:
+      name: prd
+      url: google.com
+    needs: deploy_hml
+    steps:
+      - name: Run deploy in prd
+        run: echo realizando deploy em prd
