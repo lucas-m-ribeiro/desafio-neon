@@ -11,8 +11,7 @@ class ActsCrud
     base_uri 'http://dummy.restapiexample.com/api/v1'
 
 
-    def create 
-      
+    def create
       body = {
         :name => "Barry Allen",
         :salary => '123',
@@ -25,11 +24,11 @@ class ActsCrud
       }
 
       self.class.post('/create', body: $body, headers: $headers) 
-    
+
     end
 
     def read (id)
-        self.class.get("/employee/#{ id }")
+      self.class.get("/employee/#{ id }")
     end 
 
     def delete (id)
